@@ -8,7 +8,7 @@ jobs:
   include:
     - stage: Building and running UD-Viz container
       script:
-        - docker build -t ud-viz:ud-viz-examples Context
+        - docker build -t vcity:ud-viz-examples Context
         - docker run --rm --detach -t vcity:ud-viz-examples
         - travis_wait 2 
         - docker stop $(docker ps -a -q --filter ancestor=vcity:ud-viz-examples --format="{{.ID}}")
