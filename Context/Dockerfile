@@ -19,7 +19,7 @@ RUN apt-get install -y git
 RUN git --version
 
 ######### Install UD-Viz
-RUN git clone -b new_examples https://github.com/VCityTeam/UD-Viz.git
+RUN git clone https://github.com/VCityTeam/UD-Viz.git
 WORKDIR UD-Viz
 RUN npm install
 RUN npm run build
