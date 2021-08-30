@@ -6,16 +6,13 @@ This container illustrates all the examples offered by the
 Build the docker image with
 
 ```bash
-docker build -t ud-viz:ud-viz-examples Context
+docker build -t vcity:ud-viz-examples Context
 ```
 
-docker run [-d] -p 8080:80/tcp --rm -t ud-viz:demofull-apache
-
------------------- TO BE FIXED
-Run the container with
+Then run the container e.g. with
 
 ```bash
-docker run [-d] -e UD_VIZ_EXAMPLES_PORT=8080 --rm -t ud-viz:demofull-apache
+docker run [--detach] UD_VIZ_EXAMPLES_PORT=8080 --rm -t vcity:ud-viz-examples
 ```
 
 and open a web browser on URL `http://localhost:8080/`
