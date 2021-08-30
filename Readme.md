@@ -12,7 +12,7 @@ docker build -t vcity:ud-viz-examples Context
 Then run the container e.g. with
 
 ```bash
-docker run [--detach] UD_VIZ_EXAMPLES_PORT=8080 --rm -t vcity:ud-viz-examples
+docker run [--detach] --env UD_VIZ_EXAMPLES_PORT=8080 --rm -t vcity:ud-viz-examples
 ```
 
 and open a web browser on URL `http://localhost:8080/`
