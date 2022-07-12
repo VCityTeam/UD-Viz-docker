@@ -8,7 +8,7 @@ ENV UD_VIZ_EXAMPLES_PORT=${UD_VIZ_EXAMPLES_PORT}
 
 RUN apt-get update
 
-# Node version 14 is required. For its installation (on focal) refer to e.g.
+# Node version 16 is required. For its installation (on focal) refer to e.g.
 #  https://computingforgeeks.com/install-node-js-14-on-ubuntu-debian-linux/
 RUN apt-get install -y curl
 RUN curl -sL https://deb.nodesource.com/setup_16.x | bash -
@@ -28,6 +28,7 @@ RUN npm run build
 WORKDIR /
 RUN git clone https://github.com/VCityTeam/UD-SimpleServer
 WORKDIR UD-SimpleServer
+RUN git checkout cors-issues
 RUN npm install
 
 EXPOSE ${UD_VIZ_EXAMPLES_PORT}
