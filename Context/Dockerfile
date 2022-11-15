@@ -3,9 +3,7 @@ FROM ubuntu:focal
 LABEL maintainer "VCityTeam"
 LABEL source.repo "https://github.com/VCityTeam/UD-Viz-docker"
 
-ARG UD_VIZ_EXAMPLES_PORT
-ENV UD_VIZ_EXAMPLES_PORT=${UD_VIZ_EXAMPLES_PORT}
-
+# Install system dependencies
 RUN apt-get update
 
 # Node version 16 is required. For its installation (on focal) refer to e.g.
@@ -31,6 +29,5 @@ WORKDIR UD-SimpleServer
 RUN git checkout cors-issues
 RUN npm install
 
-EXPOSE ${UD_VIZ_EXAMPLES_PORT}
-# CMD [ "node", "./index.js", "../UD-Viz", "${UD_VIZ_EXAMPLES_PORT}" ]
+EXPOSE 80
 CMD [ "node", "./index.js", "../UD-Viz", "80" ]
