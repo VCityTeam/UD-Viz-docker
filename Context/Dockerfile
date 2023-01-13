@@ -17,17 +17,13 @@ RUN apt-get install -y git
 RUN git --version
 
 ######### Install UD-Viz
+ARG checkoutName=master
 RUN git clone https://github.com/VCityTeam/UD-Viz.git
 WORKDIR UD-Viz
-RUN npm install
-RUN npm run build
-
-######### Install SimpleServer (an ExpressJS based...simple server)
-WORKDIR /
-RUN git clone https://github.com/VCityTeam/UD-SimpleServer
-WORKDIR UD-SimpleServer
-RUN git checkout cors-issues
+RUN git checkout $checkoutName
 RUN npm install
 
-EXPOSE 80
-CMD [ "node", "./index.js", "../UD-Viz", "80" ]
+
+
+EXPOSE 8000
+CMD [ "npm", "run", "host" ]
