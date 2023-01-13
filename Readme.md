@@ -20,7 +20,7 @@ and open a web browser on URL `http://localhost:8080/`
 Notes:
 
 - in the above `docker run` command the optionnal `--detach` argument requires the
-  container to run in detached mode,
+  container to run in background (detached mode),
 - the published port (the `8080` in the above `-p` flag argument of the the
   `docker run` command) can be changed but has to match with the port given
   (within the URL) when browsing
