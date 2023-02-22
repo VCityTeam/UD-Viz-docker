@@ -6,7 +6,7 @@ This container illustrates all the examples offered by the
 Build the docker image with
 
 ```bash
-docker build [-build-arg checkoutName=master] -t vcity:ud-viz-examples Context
+docker build [--build-arg checkoutName=master] -t vcity:ud-viz-examples Context
 ```
 
 Then run the container e.g. with
