@@ -6,10 +6,10 @@ LABEL source.repo "https://github.com/VCityTeam/UD-Viz-docker"
 # Install system dependencies
 RUN apt-get update
 
-# Node version 16 is required. For its installation (on focal) refer to e.g.
+# Node version 18 is required. For its installation (on focal) refer to e.g.
 #  https://computingforgeeks.com/install-node-js-14-on-ubuntu-debian-linux/
 RUN apt-get install -y curl
-RUN curl -sL https://deb.nodesource.com/setup_16.x | bash -
+RUN curl -sL https://deb.nodesource.com/setup_18.x | bash -
 RUN apt-get install -y nodejs
 RUN node --version
 RUN npm --version
