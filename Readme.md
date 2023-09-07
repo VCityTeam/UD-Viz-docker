@@ -25,3 +25,5 @@ Notes:
 - the published port (the `8080` in the above `-p` flag argument of the the
   `docker run` command) can be changed but has to match with the port given
   (within the URL) when browsing
+
+UD-Viz is available on [DockerHub vcity/ud-viz](https://hub.docker.com/r/vcity/ud-viz).
