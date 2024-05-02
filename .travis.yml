@@ -14,7 +14,7 @@ jobs:
         - docker stop $(docker ps -a -q --filter ancestor=vcity:ud-viz-examples --format="{{.ID}}")
     - stage: "Markdown link checks"
       language: node_js
-      node_js: 15
+      node_js: 18
       before_install:
         - npm --version
       install:
@@ -22,7 +22,7 @@ jobs:
       env:
         - FAILURE_THRESHOLD=0
       script:
-        - remark -u validate-links .
+        - npx remark -u validate-links .
         - export warnings=`remark -u validate-links . 2>&1 | grep warning | grep "Link to unknown" | wc -l` &&
           if [ $warnings -gt $FAILURE_THRESHOLD ]; then
           exit 1;
