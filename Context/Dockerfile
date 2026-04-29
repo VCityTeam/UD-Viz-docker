@@ -1,7 +1,7 @@
 FROM ubuntu:focal
 
-LABEL maintainer "VCityTeam"
-LABEL source.repo "https://github.com/VCityTeam/UD-Viz-docker"
+LABEL maintainer=VCityTeam
+LABEL source.repo=https://github.com/VCityTeam/UD-Viz-docker
 
 # Install system dependencies
 RUN apt-get update
@@ -22,7 +22,6 @@ RUN git clone https://github.com/VCityTeam/UD-Viz.git
 WORKDIR UD-Viz
 RUN git checkout $checkoutName
 RUN npm install
-
 
 
 EXPOSE 8000
