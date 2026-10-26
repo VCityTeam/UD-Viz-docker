@@ -19,7 +19,7 @@ and open a web browser on URL `http://localhost:8080/`
 
 Notes:
 
-- you can specify the branch or a commit in the build arg `checkoutName` (*default = master*) 
+- you can specify the branch or a commit in the build arg `checkoutName` (*default = master*)
 - in the above `docker run` command the optional `--detach` argument requires the
   container to run in background (detached mode),
 - the published port (the `8080` in the above `-p` flag argument of the the
